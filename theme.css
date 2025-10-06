@@ -1,0 +1,103 @@
+/* monai.css — MonAI dark Marp theme (refined version)
+   Based on your Compose DarkColorScheme with rounded, subtle branding */
+
+/* Base import */
+@import 'default';
+
+/* ====== Color tokens ====== */
+:root {
+  --monai-primary: #8E91FF;
+  --monai-on-primary: #FFFFFF;
+  --monai-secondary: #7A3EA7;
+  --monai-on-secondary: #FFFFFF;
+  --monai-tertiary: #8EB4FD;
+  --monai-outline: #5E4770;
+  --monai-bg: #312C31;
+  --monai-error: #CC00C5;
+  --monai-attention: #89E2FF;
+
+  --monai-text: #FFFFFF;
+  --monai-muted: #D7D3DA;
+
+  --monai-code-bg: #3C374D;
+  --monai-code-border: #5E4770;
+  --monai-radius: 10px;
+  --monai-pad: 60px;
+
+  /* Branding adjustments */
+  --monai-logo-size: 55px; /* smaller logo */
+  --monai-logo-opacity: 0.75; /* less showy */
+  --monai-logo-radius: 12px; /* rounded corners */
+  --monai-brand-gap: 12px;
+  --monai-brand-font-size: 15px;
+  --monai-brand-color: #ffffff;
+  --monai-brand-weight: 600;
+  --monai-brand-tracking: 0.01em;
+}
+
+/* ====== Layout ====== */
+section {
+  background: var(--monai-bg);
+  color: var(--monai-text);
+  padding: var(--monai-pad);
+  font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.35;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--monai-primary);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.35em; }
+
+/* Links */
+a { color: var(--monai-attention); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Code blocks */
+pre {
+  background: var(--monai-code-bg);
+  border: 1px solid var(--monai-code-border);
+  border-radius: var(--monai-radius);
+  padding: 0.9rem 1rem;
+  overflow: auto;
+}
+
+/* Brand mark — logo + text */
+section::after,
+section::before {
+  position: absolute;
+  bottom: 20px;
+  right: 36px;
+  pointer-events: none;
+}
+
+/* Logo (rounded, smaller, subtle) */
+section::after {
+  content: '';
+  width: var(--monai-logo-size);
+  height: var(--monai-logo-size);
+  background-image: url('images/logo.png'); /* replace file path if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: var(--monai-logo-opacity);
+  border-radius: var(--monai-logo-radius);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Label (MonAI - Art Generator) */
+section::before {
+  content: 'MonAI — Art Generator';
+  right: calc(36px + var(--monai-logo-size) + var(--monai-brand-gap));
+  color: var(--monai-brand-color);
+  font-weight: var(--monai-brand-weight);
+  font-size: var(--monai-brand-font-size);
+  letter-spacing: var(--monai-brand-tracking);
+  line-height: var(--monai-logo-size);
+  opacity: 0.85;
+}
