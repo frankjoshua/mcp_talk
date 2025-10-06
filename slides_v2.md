@@ -85,6 +85,10 @@ MCP lets them actually do things — plug into your calendar, notes, files, or g
 
 ---
 
+## MCP vs RAG
+
+---
+
 ## Why It Matters
 
 - No more custom integrations — one shared language for all AI tools  
