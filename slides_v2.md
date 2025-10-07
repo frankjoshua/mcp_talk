@@ -243,3 +243,18 @@ MCP isn’t theoretical — it’s already powering tools you use daily.
 ![width:600px](images/fry_wants_a_robot.webp)
 
 <!-- presenter: This demo is just a simple proof of concept — the robot doesn’t do anything fancy yet, it just navigates to a given location. But that’s the point. There’s no hardcoded logic or special API integration behind it — the model is using MCP to discover and call a navigation tool on its own. Even at this basic level, it shows that an LLM can understand intent, translate that into structured tool calls, and get a real response back. It’s a small example, but it’s a big shift: the start of AI systems that can reason *and* act, using a consistent, open protocol. -->
+
+---
+
+## The Future of MCP
+
+- A shared language for all AI tools and platforms
+
+- Seamless interoperability between agents, apps, and devices
+
+- From chat assistants → to fully capable digital coworkers
+
+MCP isn’t about one model doing everything —
+it’s about every model doing something well and working together.
+
+<!-- presenter: If you zoom out a bit, the bigger story here is interoperability. We’re moving toward a world where every app, model, and device can speak the same language — and that language is MCP. Instead of one giant, all-knowing model trying to do everything, we’ll have networks of smaller, specialized systems — each great at one thing, all coordinating through this shared protocol. That’s what makes MCP powerful: it’s not just a standard for tool use; it’s the foundation for collaboration between intelligent systems. It’s how we move from chatbots to capable digital coworkers — and eventually, AI that works with us, not just for us. -->
