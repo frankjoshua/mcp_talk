@@ -54,6 +54,13 @@ h1 { font-size: 2.2em; }
 h2 { font-size: 1.75em; }
 h3 { font-size: 1.35em; }
 
+section img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+
 /* Links */
 a { color: var(--monai-attention); text-decoration: none; }
 a:hover { text-decoration: underline; }

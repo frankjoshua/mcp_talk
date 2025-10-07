@@ -28,7 +28,9 @@ josh@joshfrank.com
 ## What Is MCP (Model Context Protocol)?
 
 - MCP is a way for AI to work with the tools you already use.  
+
 - Right now, most AIs just talk — you ask something, it answers.  
+
 - MCP lets them actually do things — plug into your calendar, notes, files, or gadgets to help directly.
 
 ---
@@ -60,13 +62,35 @@ josh@joshfrank.com
 
 ---
 
-## The Protocol
+## The Protocol: Core Structure
 
-- MCP returns structured responses describing:
-  - **Tools**
-  - **Resources**
-  - **Prompts**
-- It’s the language that lets AIs and apps communicate cleanly.
+MCP defines a standard format for exchanging structured information between models and tools.
+
+- **Tools** – callable functions the model can invoke  
+- **Resources** – data or context available to the model  
+- **Prompts** – reusable prompt templates exposed by tools  
+
+Each is described in a consistent JSON schema, so any LLM or app can discover and use them safely
+
+---
+
+## The Protocol: Utilities & Extensions
+
+Beyond the core objects, MCP supports rich capabilities for real-world use:
+
+- **Completion** – enables interactive experiences and autocompletion  
+- **Logging** – structured event logs and telemetry  
+- **Pagination** – large results streamed in manageable chunks  
+- **Streaming** – continuous updates for long-running tools  
+
+These features make MCP practical for both human-facing and automated systems.
+
+---
+
+## MCP = Tools
+
+- At its core, MCP is a universal way for AI to **use tools.**    
+![width:600px](images/the_text_MCP_==_c2144.webp)
 
 ---
 
@@ -88,13 +112,34 @@ josh@joshfrank.com
 ## MCP vs RAG
 
 - MCP enables bidirectional, tool-aware interactions — the model can call, discover, and use tools or context providers during reasoning.
+
 - RAG is unidirectional — the model retrieves text snippets before generation, but doesn’t interact with tools or update context dynamically.
+
+RAG:  User → Retriever → Model → Output  (one way)
+MCP:  User ↔ Model ↔ Tools  (bidirectional)
+
+---
+
+## MCP vs API
+
+- Dynamic discovery – Tools are found and described automatically.
+
+- Context-aware – AI understands when and how to use each tool.
+
+- Plug-and-play – Add or remove tools without changing code.
+
+
+<!-- presenter: 
+Use this slide to emphasize how MCP removes hard-coded integrations.  
+Remind them that this means less “API plumbing,” more adaptive AI behavior.
+-->
 
 ---
 
 ## Why It Matters
 
 - No more custom integrations — one shared language for all AI tools  
+
 - Already widely supported across AI platforms
 
 ---
@@ -105,32 +150,8 @@ josh@joshfrank.com
 - **Humans:** writing → science → computers → internet  
 - **LLMs:** memory → APIs → specialty models → real-world actuators  
 - Each tool amplifies capability, creating a feedback loop.  
-- **Key takeaway:** Connecting models to tools multiplies what AI can do.
 
----
-
-## MCP = Tools (Definition Slide)
-
-- At its core, MCP is a universal way for AI to **use tools.**  
-- Think of it as the connective tissue letting a model reach beyond itself.  
-- Simple message: **MCP == Tools**  
-- Visual: bold text MCP = Tools → memory, APIs, robotics, specialty models
-
----
-
-## Inside MCP
-
-- Bi-directional streaming for live updates  
-- Capability negotiation for discovery  
-- Secure, auditable execution  
-
----
-
-## Example Provider
-
-- **Context:** live project tasks  
-- **Tools:** createTask, assignTask, markDone  
-- **Visual:** live MCP session screenshot
+![width:400px](images/robot_holding_bone.webp)
 
 ---
 
@@ -145,11 +166,24 @@ josh@joshfrank.com
 
 ---
 
-## Business & Ecosystem Impact
+## From Concept to Reality
 
-- No vendor lock-in  
-- Open marketplace of reusable providers  
-- Visual: ecosystem diagram
+MCP isn’t theoretical — it’s already powering tools you use daily.
+
+---
+
+## MCP in the Wild
+
+- OpenAI – MCP powers ChatGPT’s new Agents SDK, enabling dynamic tool discovery.
+
+- Anthropic – Originator of the protocol, used across Claude and open-source reference servers.
+
+- Figma – Uses MCP to connect design files to developer tools and code systems.
+
+- GitHub / VS Code – Extensions use MCP to let AI agents manage repos, run tests, and write code.
+
+- Community Servers – Open ecosystem of connectors for Slack, Notion, Stripe, PostgreSQL, and more.
+
 
 ---
 
@@ -157,6 +191,7 @@ josh@joshfrank.com
 
 - Over **6,000 services** available  
 - [https://www.pulsemcp.com/servers](https://www.pulsemcp.com/servers)
+![width:400px](images/A_sleek_and_mode_a5f81.webp)
 
 ---
 
