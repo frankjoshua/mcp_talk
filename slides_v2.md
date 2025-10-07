@@ -25,15 +25,15 @@ josh@joshfrank.com
 
 ---
 
-## What Is MCP?
+## What Is MCP (Model Context Protocol)?
 
-MCP is a way for AI to work with the tools you already use.  
-Right now, most AIs just talk — you ask something, it answers.  
-MCP lets them actually do things — plug into your calendar, notes, files, or gadgets to help directly.
+- MCP is a way for AI to work with the tools you already use.  
+- Right now, most AIs just talk — you ask something, it answers.  
+- MCP lets them actually do things — plug into your calendar, notes, files, or gadgets to help directly.
 
 ---
 
-## What MCP Is?
+## What Is MCP?
 
 ![width:600px](images/mcp-simple-diagram.avif)
 
@@ -86,6 +86,9 @@ MCP lets them actually do things — plug into your calendar, notes, files, or g
 ---
 
 ## MCP vs RAG
+
+- MCP enables bidirectional, tool-aware interactions — the model can call, discover, and use tools or context providers during reasoning.
+- RAG is unidirectional — the model retrieves text snippets before generation, but doesn’t interact with tools or update context dynamically.
 
 ---
 
